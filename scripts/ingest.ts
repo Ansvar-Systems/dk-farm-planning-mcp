@@ -30,7 +30,7 @@ db.run("INSERT OR REPLACE INTO db_metadata (key, value) VALUES ('build_date', ?)
 
 writeFileSync('data/coverage.json', JSON.stringify({
   mcp_name: 'Denmark Farm Planning MCP',
-  jurisdiction = 'DK',
+  jurisdiction: 'DK',
   build_date: now,
   status: 'template — data not yet populated',
 }, null, 2));

@@ -52,7 +52,7 @@ function initSchema(db: BetterSqlite3.Database): void {
       blackgrass_risk TEXT,
       yield_impact_pct REAL,
       source TEXT,
-      jurisdiction = 'DK'
+      jurisdiction TEXT DEFAULT 'DK'
     );
 
     CREATE TABLE IF NOT EXISTS gross_margins (
@@ -66,7 +66,7 @@ function initSchema(db: BetterSqlite3.Database): void {
       top_quartile REAL,
       bottom_quartile REAL,
       source TEXT,
-      jurisdiction = 'DK'
+      jurisdiction TEXT DEFAULT 'DK'
     );
 
     CREATE TABLE IF NOT EXISTS tax_rules (
@@ -77,7 +77,7 @@ function initSchema(db: BetterSqlite3.Database): void {
       deadlines TEXT,
       penalties TEXT,
       hmrc_ref TEXT,
-      jurisdiction = 'DK'
+      jurisdiction TEXT DEFAULT 'DK'
     );
 
     CREATE TABLE IF NOT EXISTS apr_guidance (
@@ -89,7 +89,7 @@ function initSchema(db: BetterSqlite3.Database): void {
       clawback_period TEXT,
       notes TEXT,
       hmrc_ref TEXT,
-      jurisdiction = 'DK'
+      jurisdiction TEXT DEFAULT 'DK'
     );
 
     CREATE TABLE IF NOT EXISTS tenancy_rules (
@@ -99,7 +99,7 @@ function initSchema(db: BetterSqlite3.Database): void {
       rule TEXT NOT NULL,
       conditions TEXT,
       act_section TEXT,
-      jurisdiction = 'DK'
+      jurisdiction TEXT DEFAULT 'DK'
     );
 
     CREATE TABLE IF NOT EXISTS diversification (
@@ -109,7 +109,7 @@ function initSchema(db: BetterSqlite3.Database): void {
       max_floor_area_m2 REAL,
       business_rates_impact TEXT,
       planning_notes TEXT,
-      jurisdiction = 'DK'
+      jurisdiction TEXT DEFAULT 'DK'
     );
 
     CREATE VIRTUAL TABLE IF NOT EXISTS search_index USING fts5(
@@ -123,7 +123,7 @@ function initSchema(db: BetterSqlite3.Database): void {
 
     INSERT OR IGNORE INTO db_metadata (key, value) VALUES ('schema_version', '1.0');
     INSERT OR IGNORE INTO db_metadata (key, value) VALUES ('mcp_name', 'Denmark Farm Planning MCP');
-    INSERT OR IGNORE INTO db_metadata (key, value) VALUES ('jurisdiction = 'DK');
+    INSERT OR IGNORE INTO db_metadata (key, value) VALUES ('jurisdiction', 'DK');
   `);
 }
 
