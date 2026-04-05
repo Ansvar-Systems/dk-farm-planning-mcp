@@ -1,6 +1,23 @@
 {
-  "mcp_name": "Denmark Farm Planning MCP",
+  "mcp_name": "Danish Farm Planning MCP",
   "jurisdiction": "DK",
   "build_date": "2026-04-05",
-  "status": "template — data not yet populated"
+  "status": "populated",
+  "record_counts": {
+    "business_structures": 5,
+    "tax_rules": 5,
+    "succession_planning": 3,
+    "gross_margins": 6,
+    "cost_benchmarks": 3,
+    "rotation_guidance": 8,
+    "tenancy_rules": 5,
+    "total": 35
+  },
+  "data_sources": [
+    "SEGES Innovation Farmtal Online",
+    "Skattestyrelsen",
+    "DLBR",
+    "Danske Revisorer"
+  ],
+  "disclaimer": "Data er vejledende. Kontakt din revisor eller landbrugskonsulent for rådgivning tilpasset din situation."
 }

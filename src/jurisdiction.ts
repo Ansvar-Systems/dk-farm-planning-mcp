@@ -1,4 +1,4 @@
-export const SUPPORTED_JURISDICTIONS = ['DE'] as const;
+export const SUPPORTED_JURISDICTIONS = ['DK'] as const;
 export type Jurisdiction = (typeof SUPPORTED_JURISDICTIONS)[number];
 
 type ValidationSuccess = { valid: true; jurisdiction: Jurisdiction };
@@ -13,7 +13,7 @@ type ValidationFailure = {
 type ValidationResult = ValidationSuccess | ValidationFailure;
 
 export function validateJurisdiction(input: string | undefined): ValidationResult {
-  const normalised = (input ?? 'DE').toUpperCase();
+  const normalised = (input ?? 'DK').toUpperCase();
 
   if (SUPPORTED_JURISDICTIONS.includes(normalised as Jurisdiction)) {
     return { valid: true, jurisdiction: normalised as Jurisdiction };
