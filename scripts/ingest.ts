@@ -213,6 +213,94 @@ const grossMargins = [
     bottom_quartile: 20,
     source: 'SEGES Farmtal Online 2025',
   },
+  {
+    enterprise: 'Sukkerroer',
+    year: '2025',
+    output_per_unit: 18200,
+    variable_costs_per_unit: 12500,
+    gross_margin_per_unit: 5700,
+    unit: 'DKK/ha',
+    top_quartile: 7500,
+    bottom_quartile: 3800,
+    source: 'SEGES Budgetkalkuler 2025',
+  },
+  {
+    enterprise: 'Kartofler spise',
+    year: '2025',
+    output_per_unit: 48000,
+    variable_costs_per_unit: 32000,
+    gross_margin_per_unit: 16000,
+    unit: 'DKK/ha',
+    top_quartile: 22000,
+    bottom_quartile: 10000,
+    source: 'SEGES Budgetkalkuler 2025',
+  },
+  {
+    enterprise: 'Kartofler stivelse',
+    year: '2025',
+    output_per_unit: 22500,
+    variable_costs_per_unit: 15000,
+    gross_margin_per_unit: 7500,
+    unit: 'DKK/ha',
+    top_quartile: 10000,
+    bottom_quartile: 5000,
+    source: 'SEGES Budgetkalkuler 2025',
+  },
+  {
+    enterprise: 'Silomajs',
+    year: '2025',
+    output_per_unit: 14400,
+    variable_costs_per_unit: 8500,
+    gross_margin_per_unit: 5900,
+    unit: 'DKK/ha',
+    top_quartile: 7800,
+    bottom_quartile: 4000,
+    source: 'SEGES Budgetkalkuler 2025',
+  },
+  {
+    enterprise: 'Kløvergræs',
+    year: '2025',
+    output_per_unit: 10400,
+    variable_costs_per_unit: 5200,
+    gross_margin_per_unit: 5200,
+    unit: 'DKK/ha',
+    top_quartile: 7000,
+    bottom_quartile: 3500,
+    source: 'SEGES Budgetkalkuler 2025',
+  },
+  {
+    enterprise: 'Havre',
+    year: '2025',
+    output_per_unit: 7700,
+    variable_costs_per_unit: 4500,
+    gross_margin_per_unit: 3200,
+    unit: 'DKK/ha',
+    top_quartile: 4500,
+    bottom_quartile: 2000,
+    source: 'SEGES Budgetkalkuler 2025',
+  },
+  {
+    enterprise: 'Frøgræs rajgræs',
+    year: '2025',
+    output_per_unit: 16500,
+    variable_costs_per_unit: 8000,
+    gross_margin_per_unit: 8500,
+    unit: 'DKK/ha',
+    top_quartile: 11000,
+    bottom_quartile: 6000,
+    source: 'SEGES Budgetkalkuler 2025',
+  },
+  {
+    enterprise: 'Ærter',
+    year: '2025',
+    output_per_unit: 8800,
+    variable_costs_per_unit: 5200,
+    gross_margin_per_unit: 3600,
+    unit: 'DKK/ha',
+    top_quartile: 5000,
+    bottom_quartile: 2200,
+    source: 'SEGES Budgetkalkuler 2025',
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -240,6 +328,107 @@ const costBenchmarks = [
     max_floor_area_m2: null,
     business_rates_impact: null,
     planning_notes: 'Realkredit: 2-4% variabelt, Kassekredit: 5-8%, Yngre jordbrugerlån: afviklet 2020',
+  },
+  // Financial ratios (nøgletal)
+  {
+    activity: 'Soliditetsgrad',
+    pd_class: 'Nøgletal',
+    max_floor_area_m2: null,
+    business_rates_impact: null,
+    planning_notes: 'Anbefalet minimum 30% for landbrugsbedrifter. Egenkapital / samlede aktiver x 100.',
+  },
+  {
+    activity: 'Driftsresultat',
+    pd_class: 'Nøgletal',
+    max_floor_area_m2: null,
+    business_rates_impact: null,
+    planning_notes: 'Gennemsnit ca. 500.000 DKK for fuldtidsbedrifter (varierer med konjunkturer og driftsgren).',
+  },
+  {
+    activity: 'Gæld per ha',
+    pd_class: 'Nøgletal',
+    max_floor_area_m2: null,
+    business_rates_impact: null,
+    planning_notes: 'Gennemsnit ca. 120.000 DKK/ha. Højere på Sjælland/Lolland, lavere i Vest- og Nordjylland.',
+  },
+  {
+    activity: 'Forrentning af egenkapital',
+    pd_class: 'Nøgletal',
+    max_floor_area_m2: null,
+    business_rates_impact: null,
+    planning_notes: 'Gennemsnit 3-5%. Driftsresultat efter ejerløn / egenkapital x 100.',
+  },
+  {
+    activity: 'Kapacitetsomkostninger',
+    pd_class: 'Nøgletal',
+    max_floor_area_m2: null,
+    business_rates_impact: null,
+    planning_notes: 'Typisk 5.000-8.000 DKK/ha. Omfatter vedligehold, forsikring, administration, ejendomsskat.',
+  },
+  // Insurance (forsikring)
+  {
+    activity: 'Brandforsikring',
+    pd_class: 'Forsikring',
+    max_floor_area_m2: null,
+    business_rates_impact: null,
+    planning_notes: 'Obligatorisk for bygninger med offentlig vurdering. Dækker brand, lynnedslag, eksplosion.',
+  },
+  {
+    activity: 'Driftstabsforsikring',
+    pd_class: 'Forsikring',
+    max_floor_area_m2: null,
+    business_rates_impact: null,
+    planning_notes: 'Dækker tabt indtjening ved brand, storm eller anden dækningsberettiget skade. Karensperiode typisk 3-5 dage.',
+  },
+  {
+    activity: 'Ansvarsforsikring',
+    pd_class: 'Forsikring',
+    max_floor_area_m2: null,
+    business_rates_impact: null,
+    planning_notes: 'Dækker skader på tredjemand forårsaget af bedriftens drift, herunder sprøjteskader og husdyrudslip.',
+  },
+  {
+    activity: 'Husdyrforsikring',
+    pd_class: 'Forsikring',
+    max_floor_area_m2: null,
+    business_rates_impact: null,
+    planning_notes: 'Forsikrer besætningsværdi. Dækker typisk sygdom, ulykke, nødaflivning. Præmie afhænger af dyreart og antal.',
+  },
+  {
+    activity: 'Afgrødeforsikring',
+    pd_class: 'Forsikring',
+    max_floor_area_m2: null,
+    business_rates_impact: null,
+    planning_notes: 'Dækker hagl, storm og tørke. Nyere ordning med EU-tilskud til præmie under CAP risikostyringsrammen.',
+  },
+  // Labor (arbejdskraft)
+  {
+    activity: 'Overenskomst 3F Grøn',
+    pd_class: 'Arbejdskraft',
+    max_floor_area_m2: null,
+    business_rates_impact: null,
+    planning_notes: 'Landbrugsmedarbejdere under 3F Grøn overenskomst. Grundløn ca. 28.000 DKK/md inkl. tillæg.',
+  },
+  {
+    activity: 'Udenlandsk arbejdskraft',
+    pd_class: 'Arbejdskraft',
+    max_floor_area_m2: null,
+    business_rates_impact: null,
+    planning_notes: 'Kræver opholdstilladelse (EU/EØS fritaget), betalingserklæring til SIRI, ligebehandling mht. løn og vilkår.',
+  },
+  {
+    activity: 'Sæsonarbejdere',
+    pd_class: 'Arbejdskraft',
+    max_floor_area_m2: null,
+    business_rates_impact: null,
+    planning_notes: 'Max 6 måneders ansættelse. Registreringspligt hos RUT-registret. Typisk til frugt, bær, grøntsager.',
+  },
+  {
+    activity: 'Vikarbureau',
+    pd_class: 'Arbejdskraft',
+    max_floor_area_m2: null,
+    business_rates_impact: null,
+    planning_notes: 'Udbydere: Agri Nord, DLG, DLBR-samarbejder. Vikarbureau bærer arbejdsgiveransvar. Brugerbedrift bærer arbejdsmiljøansvar.',
   },
 ];
 
@@ -486,13 +675,18 @@ for (const row of marginRows) {
 }
 
 // Cost benchmarks
-const costRows = db.all<{ activity: string; planning_notes: string }>(
-  "SELECT activity, planning_notes FROM diversification WHERE jurisdiction = 'DK'"
+const costRows = db.all<{ activity: string; pd_class: string; planning_notes: string }>(
+  "SELECT activity, pd_class, planning_notes FROM diversification WHERE jurisdiction = 'DK'"
 );
 for (const row of costRows) {
+  const topic =
+    row.pd_class === 'Nøgletal' ? 'nøgletal' :
+    row.pd_class === 'Forsikring' ? 'forsikring' :
+    row.pd_class === 'Arbejdskraft' ? 'arbejdskraft' :
+    'omkostninger';
   db.run(
     "INSERT INTO search_index (title, body, topic, jurisdiction) VALUES (?, ?, ?, 'DK')",
-    [row.activity, row.planning_notes, 'omkostninger']
+    [row.activity, row.planning_notes, topic]
   );
 }
 
@@ -530,7 +724,7 @@ db.run("INSERT OR REPLACE INTO db_metadata (key, value) VALUES ('last_ingest', ?
 db.run("INSERT OR REPLACE INTO db_metadata (key, value) VALUES ('build_date', ?)", [now]);
 db.run("INSERT OR REPLACE INTO db_metadata (key, value) VALUES ('mcp_name', 'Danish Farm Planning MCP')");
 db.run("INSERT OR REPLACE INTO db_metadata (key, value) VALUES ('jurisdiction', 'DK')");
-db.run("INSERT OR REPLACE INTO db_metadata (key, value) VALUES ('data_sources', 'SEGES Innovation Farmtal Online, Skattestyrelsen, DLBR, Danske Revisorer')");
+db.run("INSERT OR REPLACE INTO db_metadata (key, value) VALUES ('data_sources', 'SEGES Innovation Farmtal Online, SEGES Budgetkalkuler, Skattestyrelsen, DLBR, Danske Revisorer, 3F Grøn, SIRI')");
 db.run("INSERT OR REPLACE INTO db_metadata (key, value) VALUES ('disclaimer', 'Data er vejledende. Kontakt din revisor eller landbrugskonsulent for rådgivning tilpasset din situation.')");
 
 // ---------------------------------------------------------------------------
@@ -566,9 +760,12 @@ writeFileSync(
       },
       data_sources: [
         'SEGES Innovation Farmtal Online',
+        'SEGES Budgetkalkuler',
         'Skattestyrelsen',
         'DLBR',
         'Danske Revisorer',
+        '3F Grøn',
+        'SIRI',
       ],
       disclaimer:
         'Data er vejledende. Kontakt din revisor eller landbrugskonsulent for rådgivning tilpasset din situation.',

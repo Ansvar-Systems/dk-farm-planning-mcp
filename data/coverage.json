@@ -7,17 +7,20 @@
     "business_structures": 5,
     "tax_rules": 5,
     "succession_planning": 3,
-    "gross_margins": 6,
-    "cost_benchmarks": 3,
+    "gross_margins": 14,
+    "cost_benchmarks": 17,
     "rotation_guidance": 8,
     "tenancy_rules": 5,
-    "total": 35
+    "total": 57
   },
   "data_sources": [
     "SEGES Innovation Farmtal Online",
+    "SEGES Budgetkalkuler",
     "Skattestyrelsen",
     "DLBR",
-    "Danske Revisorer"
+    "Danske Revisorer",
+    "3F Grøn",
+    "SIRI"
   ],
   "disclaimer": "Data er vejledende. Kontakt din revisor eller landbrugskonsulent for rådgivning tilpasset din situation."
 }
