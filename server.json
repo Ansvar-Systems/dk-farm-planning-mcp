@@ -1,0 +1,16 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Ansvar-Systems/uk-farm-planning",
+  "description": "UK farm planning \u2014 crop rotation, gross margins, tax rules, APR, tenancy law",
+  "repository": {
+    "url": "https://github.com/Ansvar-Systems/uk-farm-planning-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.ansvar.eu/uk-farm-planning/mcp"
+    }
+  ]
+}
