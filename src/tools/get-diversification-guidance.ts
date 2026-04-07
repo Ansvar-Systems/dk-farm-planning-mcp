@@ -1,4 +1,5 @@
 import { buildMeta } from '../metadata.js';
+import { buildCitation } from '../citation.js';
 import { validateJurisdiction } from '../jurisdiction.js';
 import type { Database } from '../db.js';
 
@@ -48,5 +49,11 @@ export function handleGetDiversificationGuidance(db: Database, args: Diversifica
       planning_notes: r.planning_notes,
     })),
     _meta: buildMeta({ source_url: 'https://www.legislation.gov.uk/uksi/2015/596' }),
+    _citation: buildCitation(
+      `DK Diversification Guidance`,
+      `Danish diversification guidance`,
+      'get_diversification_guidance',
+      { ...(args.activity ? { activity: args.activity } : {}) },
+    ),
   };
 }

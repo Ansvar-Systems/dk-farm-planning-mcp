@@ -1,4 +1,5 @@
 import { buildMeta } from '../metadata.js';
+import { buildCitation } from '../citation.js';
 import { validateJurisdiction } from '../jurisdiction.js';
 import type { Database } from '../db.js';
 
@@ -53,5 +54,11 @@ export function handleGetAprGuidance(db: Database, args: AprArgs) {
       hmrc_ref: r.hmrc_ref,
     })),
     _meta: buildMeta({ source_url: 'https://www.gov.uk/inheritance-tax/agricultural-relief' }),
+    _citation: buildCitation(
+      `DK APR Guidance`,
+      `Danish APR guidance`,
+      'get_apr_guidance',
+      { ...(args.scenario ? { scenario: args.scenario } : {}) },
+    ),
   };
 }

@@ -1,4 +1,5 @@
 import { buildMeta } from '../metadata.js';
+import { buildCitation } from '../citation.js';
 import { validateJurisdiction } from '../jurisdiction.js';
 import type { Database } from '../db.js';
 
@@ -41,5 +42,11 @@ export function handleGetTaxRules(db: Database, args: TaxRulesArgs) {
       hmrc_ref: r.hmrc_ref,
     })),
     _meta: buildMeta({ source_url: 'https://www.gov.uk/hmrc-internal-manuals' }),
+    _citation: buildCitation(
+      `DK Tax Rules — ${args.topic}`,
+      `Danish farm tax rules for ${args.topic}`,
+      'get_tax_rules',
+      { topic: args.topic },
+    ),
   };
 }

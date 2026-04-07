@@ -1,4 +1,5 @@
 import { buildMeta } from '../metadata.js';
+import { buildCitation } from '../citation.js';
 import { validateJurisdiction } from '../jurisdiction.js';
 import type { Database } from '../db.js';
 
@@ -69,5 +70,11 @@ export function handleGetRotationGuidance(db: Database, args: RotationArgs) {
       source: r.source,
     })),
     _meta: buildMeta({ source_url: 'https://ahdb.org.uk/knowledge-library/rotation' }),
+    _citation: buildCitation(
+      `DK Rotation Guidance — ${args.crops}`,
+      `Danish rotation guidance for ${args.crops}`,
+      'get_rotation_guidance',
+      { crops: args.crops },
+    ),
   };
 }
